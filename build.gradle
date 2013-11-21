@@ -13,7 +13,8 @@ repositories {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://nexus.corp.macermedia.com/nexus/content/repositories/releases")
+//            repository(url: "http://nexus.corp.macermedia.com/nexus/content/repositories/releases")
+            repository(url: "http://adglue-maven-release-repo.s3-website-us-east-1.amazonaws.com")
         }
     }
 }

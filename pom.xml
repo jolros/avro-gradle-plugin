@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     It is NOT used for the actual build.  The build uses gradle, not maven.  See build.gradle for details.
+-->
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache.avro</groupId>
+  <artifactId>avro-gradle-plugin</artifactId>
+  <version>1.7.5</version>
+  <name>avro-gradle-plugin</name>
+  <description>Gradle Plugin for processing Avro files</description>
+  <licenses>
+    <license>
+        <name>Apache License Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro-compiler</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>1.8.7</version>
+    </dependency>
+  </dependencies>
+  <build>
+        <extensions>
+            <extension>
+                <groupId>org.springframework.build</groupId>
+                <artifactId>aws-maven</artifactId>
+                <version>4.4.0.RELEASE</version>
+            </extension>
+        </extensions>
+  </build>
+  <distributionManagement>  
+     <repository>  
+       <id>adglue-s3-release-repo</id>  
+       <name>S3 Release Repository</name>  
+       <url>s3://adglue-maven-release-repo/release</url>  
+     </repository>
+   </distributionManagement> 
+</project>
